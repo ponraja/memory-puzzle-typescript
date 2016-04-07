@@ -2,11 +2,36 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import * as $ from "jquery";
 
-export interface CardProps {content:string;}
+export interface CardProps {
+    content:number;
+    validateCard:any;
+}
 
-export class Card extends React.Component<CardProps,{}>{
-    flipCard(element) {
+export interface CardStatus {
+    completed:boolean;
+}
+  
+    
+export class Card extends React.Component<CardProps, CardStatus>{
+    constructor(props, context) {
+    super(props, context);
+    this.state = { completed: false };
+  }
+  
+  flipCard(element) 
+  {
+      console.log("FlipCard called!!!");
+        if(this.state.completed)
+        {
+            return;
+        }
         $(element.currentTarget).toggleClass('flipped');
+        this.props.validateCard(this.props.content, this.callback);
+    }
+    
+    callback(result:boolean) {
+        this.state.completed = result;
+        this.setState(this.state);
     }
     
     render(){
