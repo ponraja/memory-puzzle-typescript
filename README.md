@@ -5,9 +5,9 @@ Simple memory puzzle game in typescript
 
 Requirement:
 
--  typescript 
--  typings
--  webpack
+-  Typescript 
+-  Typings
+-  Webpack
 
 First ensure TypeScript, Typings, and webpack are installed globally.
 ```
@@ -19,11 +19,18 @@ Install dependencies:
 npm install
 ```
 
+Install type definitions:
+
+```
+typings install
+
+```
+
 ## Running
 
-Run webpack (for bundle):
+Run webpack for bundle:
 
 ```
 webpack
 ```
-Now open up **index.html** in your favorite browser!!!
+finally open **index.html** in your favorite browser!!!

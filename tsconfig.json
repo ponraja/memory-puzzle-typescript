@@ -10,6 +10,7 @@
     "files": [
         "./typings/main.d.ts",
         "./src/components/card.tsx",
+        "./src/components/gameboard.tsx",
         "./src/index.tsx"
     ]
 }

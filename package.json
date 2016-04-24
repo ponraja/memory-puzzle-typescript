@@ -4,6 +4,7 @@
   "description": "Memory Puzzle",
   "main": "./lib/bundle.js",
   "scripts": {
+    "start": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "ponraja",
